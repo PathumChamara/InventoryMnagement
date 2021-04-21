@@ -6,10 +6,14 @@ using System.Threading.Tasks;
 
 namespace InventoryMnagement.ViewModel
 {
-    public class ItemCategoryViewModel
+    public class TransactionForm
     {
         public int Id { get; set; }
         [Required]
-        public string Category { get; set; }
+        public string Status { get; set; }
+        [Required]
+        public string Item { get; set; }
+        [Required]
+        public int Quantity { get; set; }
     }
 }

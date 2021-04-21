@@ -11,6 +11,7 @@ namespace InventoryMnagement.Models
         [Key]
         public int Id { get; set; }
         [Required]
+        [StringLength(150)]
         public string ItemName { get; set; }
         [Required]
         public int Quantity { get; set; }

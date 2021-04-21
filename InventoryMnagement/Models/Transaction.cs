@@ -11,9 +11,12 @@ namespace InventoryMnagement.Models
         [Key]
         public int Id { get; set; }
         [Required]
-        public string Status { get; set; }
+        public int Status { get; set; }
         [Required]
-        public string Item { get; set; }
+        public int ItemId { get; set; }
+        public Item Item { get; set; }
+
+
         [Required]
         public int Quantity { get; set; }
     }

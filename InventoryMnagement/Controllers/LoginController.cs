@@ -23,11 +23,11 @@ namespace InventoryMnagement.Controllers
         }
 
        [HttpGet]
-       public async Task<IActionResult> CheckLoginDetailsAsync([FromQuery]LoginInfoViewModel loginInfoViewModel)
+       public async Task<IActionResult> CheckLoginDetailsAsync([FromQuery]LoginInfoForm loginInfoForm)
         {
-           var data = await _appDbContext.LoginInfos.Where(x => x.UserName == loginInfoViewModel.UserName).FirstOrDefaultAsync();
+           var data = await _appDbContext.LoginInfos.Where(x => x.UserName == loginInfoForm.UserName).FirstOrDefaultAsync();
 
-            if(data.Password == loginInfoViewModel.Password)
+            if(data.Password == loginInfoForm.Password)
             {
                 return Ok("valid");
             }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace InventoryMnagement.ViewModel
 {
-    public class LoginInfoViewModel
+    public class LoginInfoForm
     {
         [Required]
         public string UserName { get; set; }
